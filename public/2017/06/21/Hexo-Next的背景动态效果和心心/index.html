@@ -19,7 +19,7 @@
 <meta property="og:site_name" content="酸甜瓜">
 <meta property="og:description" content="hexo 美化">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-08-15T07:23:02.073Z">
+<meta property="og:updated_time" content="2017-08-16T09:11:54.924Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo-Next的背景动态效果和心心">
 <meta name="twitter:description" content="hexo 美化">
@@ -29,8 +29,8 @@
 
   
 
-  <link rel="icon" href="/css/images/mylogo.jpg">
-  <link rel="apple-touch-icon" href="/css/images/mylogo.jpg">
+  <link rel="icon" href="/css/images/favicon.jpeg">
+  <link rel="apple-touch-icon" href="/css/images/favicon.jpeg">
   
     <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   
@@ -92,7 +92,7 @@
               <a class="brand" style="
                  margin-top: 0px;"  
                 href="#" data-toggle="modal" data-target="#myModal" >
-                  <img width="124px" height="124px" alt="Hike News" src="/css/images/mylogo.jpg">
+                  <img width="124px" height="124px" alt="Hike News" src="/css/images/favicon.jpeg">
               </a>
             
             
@@ -102,10 +102,6 @@
                   <li> <a class="main-nav-link" href="/">首页</a> </li>
                 
                   <li> <a class="main-nav-link" href="/archives">归档</a> </li>
-                
-                  <li> <a class="main-nav-link" href="/categories">分类</a> </li>
-                
-                  <li> <a class="main-nav-link" href="/tags">标签</a> </li>
                 
                   <li> <a class="main-nav-link" href="/about">关于</a> </li>
                 
@@ -184,17 +180,12 @@
     <a class="article-category-link" href="/categories/“hexo-配置”/">“hexo 配置”</a>
 
       
-	<a class="article-views">
-	<span id="busuanzi_container_page_pv">
-		阅读量<span id="busuanzi_value_page_pv"></span>
-	</span>
-	</a>
-
     </div>
     <div class="article-entry" itemprop="articleBody">
       
         <p>1.主题使用的是 Next 。先下载 love.js 和 particle.js<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">js 文件下载地址 </div><div class="line">http://7u2ss1.com1.z0.glb.clouddn.com/love.js</div><div class="line">http://7u2ss1.com1.z0.glb.clouddn.com/particle.js</div></pre></td></tr></table></figure></p>
 <p>如果地址无效了，可以直接复制下面代码</p>
+<a id="more"></a>
 <font color="black" size="3">love.js</font><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">!function(e,t,a)&#123;function n()&#123;c(&quot;.heart&#123;width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);&#125;.heart:after,.heart:before&#123;content: &apos;&apos;;width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;&#125;.heart:after&#123;top: -5px;&#125;.heart:before&#123;left: -5px;&#125;&quot;),o(),r()&#125;function r()&#123;for(var e=0;e&lt;d.length;e++)d[e].alpha&lt;=0?(t.body.removeChild(d[e].el),d.splice(e,1)):(d[e].y--,d[e].scale+=.004,d[e].alpha-=.013,d[e].el.style.cssText=&quot;left:&quot;+d[e].x+&quot;px;top:&quot;+d[e].y+&quot;px;opacity:&quot;+d[e].alpha+&quot;;transform:scale(&quot;+d[e].scale+&quot;,&quot;+d[e].scale+&quot;) rotate(45deg);background:&quot;+d[e].color+&quot;;z-index:99999&quot;);requestAnimationFrame(r)&#125;function o()&#123;var t=&quot;function&quot;==typeof e.onclick&amp;&amp;e.onclick;e.onclick=function(e)&#123;t&amp;&amp;t(),i(e)&#125;&#125;function i(e)&#123;var a=t.createElement(&quot;div&quot;);a.className=&quot;heart&quot;,d.push(&#123;el:a,x:e.clientX-5,y:e.clientY-5,scale:1,alpha:1,color:s()&#125;),t.body.appendChild(a)&#125;function c(e)&#123;var a=t.createElement(&quot;style&quot;);a.type=&quot;text/css&quot;;try&#123;a.appendChild(t.createTextNode(e))&#125;catch(t)&#123;a.styleSheet.cssText=e&#125;t.getElementsByTagName(&quot;head&quot;)[0].appendChild(a)&#125;function s()&#123;return&quot;rgb(&quot;+~~(255*Math.random())+&quot;,&quot;+~~(255*Math.random())+&quot;,&quot;+~~(255*Math.random())+&quot;)&quot;&#125;var d=[];e.requestAnimationFrame=function()&#123;return e.requestAnimationFrame||e.webkitRequestAnimationFrame||e.mozRequestAnimationFrame||e.oRequestAnimationFrame||e.msRequestAnimationFrame||function(e)&#123;setTimeout(e,1e3/60)&#125;&#125;(),n()&#125;(window,document);</div></pre></td></tr></table></figure><br><br><font color="black" size="3">particle.js</font>
 
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">!function()&#123;function n(n,e,t)&#123;return n.getAttribute(e)||t&#125;function e(n)&#123;return document.getElementsByTagName(n)&#125;function t()&#123;var t=e(&quot;script&quot;),o=t.length,i=t[o-1];return&#123;l:o,z:n(i,&quot;zIndex&quot;,-1),o:n(i,&quot;opacity&quot;,.5),c:n(i,&quot;color&quot;,&quot;0,0,0&quot;),n:n(i,&quot;count&quot;,99)&#125;&#125;function o()&#123;c=u.width=window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth,a=u.height=window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight&#125;function i()&#123;l.clearRect(0,0,c,a);var n,e,t,o,u,d,x=[w].concat(y);y.forEach(function(i)&#123;for(i.x+=i.xa,i.y+=i.ya,i.xa*=i.x&gt;c||i.x&lt;0?-1:1,i.ya*=i.y&gt;a||i.y&lt;0?-1:1,l.fillRect(i.x-.5,i.y-.5,1,1),e=0;e&lt;x.length;e++)n=x[e],i!==n&amp;&amp;null!==n.x&amp;&amp;null!==n.y&amp;&amp;(o=i.x-n.x,u=i.y-n.y,d=o*o+u*u,d&lt;n.max&amp;&amp;(n===w&amp;&amp;d&gt;=n.max/2&amp;&amp;(i.x-=.03*o,i.y-=.03*u),t=(n.max-d)/n.max,l.beginPath(),l.lineWidth=t/2,l.strokeStyle=&quot;rgba(&quot;+m.c+&quot;,&quot;+(t+.2)+&quot;)&quot;,l.moveTo(i.x,i.y),l.lineTo(n.x,n.y),l.stroke()));x.splice(x.indexOf(i),1)&#125;),r(i)&#125;var c,a,u=document.createElement(&quot;canvas&quot;),m=t(),d=&quot;c_n&quot;+m.l,l=u.getContext(&quot;2d&quot;),r=window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.oRequestAnimationFrame||window.msRequestAnimationFrame||function(n)&#123;window.setTimeout(n,1e3/45)&#125;,x=Math.random,w=&#123;x:null,y:null,max:2e4&#125;;u.id=d,u.style.cssText=&quot;position:fixed;top:0;left:0;z-index:&quot;+m.z+&quot;;opacity:&quot;+m.o,e(&quot;body&quot;)[0].appendChild(u),o(),window.onresize=o,window.onmousemove=function(n)&#123;n=n||window.event,w.x=n.clientX,w.y=n.clientY&#125;,window.onmouseout=function()&#123;w.x=null,w.y=null&#125;;for(var y=[],s=0;m.n&gt;s;s++)&#123;var f=x()*c,h=x()*a,g=2*x()-1,p=2*x()-1;y.push(&#123;x:f,y:h,xa:g,ya:p,max:6e3&#125;)&#125;setTimeout(function()&#123;i()&#125;,100)&#125;();</div></pre></td></tr></table></figure>
@@ -215,8 +206,8 @@ var a = new Donate({
   title: '如果觉得我的文章对您有用，请随意打赏。您的支持将鼓励我继续创作!', // 可选参数，打赏标题
   btnText: '打赏支持', // 可选参数，打赏按钮文字
   el: document.getElementById('donation_div'),
-  wechatImage: 'https://raw.githubusercontent.com/iTimeTraveler/iTimeTraveler.github.io/site/source/about/donate/images/WeChanQR.png',
-  alipayImage: 'https://raw.githubusercontent.com/iTimeTraveler/iTimeTraveler.github.io/site/source/about/donate/images/AliPayQR.jpg'
+  wechatImage: 'https://raw.githubusercontent.com/lvdouzhou/blogSourceFIle/master/source/weixin.png',
+  alipayImage: 'https://raw.githubusercontent.com/lvdouzhou/blogSourceFIle/master/source/zhifubao.jpg'
 });
 </script>
       
@@ -224,7 +215,7 @@ var a = new Donate({
         
 	<div id="comment">
 		<!-- 来必力City版安装代码 -->
-		<div id="lv-container" data-id="city" data-uid="MTAyMC8yOTQ4MS82MDQ5">
+		<div id="lv-container" data-id="city" data-uid="MTAyMC8zMDIxNi82Nzcx">
 		<script type="text/javascript">
 		   (function(d, s) {
 		       var j, e = d.getElementsByTagName(s)[0];
@@ -253,6 +244,20 @@ var a = new Donate({
   </div>
   
     
+<nav id="article-nav">
+  
+    <a href="/2017/08/16/markdown 语法学习/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          MarkDown 语法学习
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
   
 </article>
 
@@ -279,10 +284,7 @@ var a = new Donate({
 	      <p id="copyRightEn">Copyright &copy; 2013 - 2017 酸甜瓜 All Rights Reserved.</p>
 	      
 	      
-    		<p class="busuanzi_uv">
-				访客数 : <span id="busuanzi_value_site_uv"></span> |  
-				访问量 : <span id="busuanzi_value_site_pv"></span>
-		    </p>
+  		   	<p id="copyRightCn">suantiangua 保留所有权利</p>
   		   
 		</div>
 
@@ -311,10 +313,6 @@ var a = new Donate({
     <a href="/" class="mobile-nav-link">Home</a>
   
     <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-    <a href="/categories" class="mobile-nav-link">Categories</a>
-  
-    <a href="/tags" class="mobile-nav-link">Tags</a>
   
     <a href="/about" class="mobile-nav-link">About</a>
   
@@ -360,8 +358,6 @@ var a = new Donate({
 <script src="/js/scripts.js"></script>
 
 
-  <script src="/js/home.js"></script>
-
 
 
   <script src="/js/dialog.js"></script>
@@ -374,15 +370,22 @@ var a = new Donate({
 
 
 	<div style="display: none;">
-    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+    <script src="https://s95.cnzz.com/z_stat.php?id=1263567458&web_id=1263567458" language="JavaScript"></script>
   </div>
 
 
 
-	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
-	</script>
 
 
+	<script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?{{ theme.baidu_analytics }}";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
 
 
 

@@ -25,8 +25,8 @@
 
   
 
-  <link rel="icon" href="/css/images/mylogo.jpg">
-  <link rel="apple-touch-icon" href="/css/images/mylogo.jpg">
+  <link rel="icon" href="/css/images/favicon.jpeg">
+  <link rel="apple-touch-icon" href="/css/images/favicon.jpeg">
   
     <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   
@@ -51,8 +51,6 @@
   
 
   
-    <link rel="stylesheet" href="/css/header-post.css" >
-  
 
   
   
@@ -68,95 +66,251 @@
 
 
   
-  <div id="container">
-    <div id="wrap">
-      
-        <header>
+    <header id="header">
 
-    <div id="allheader" class="navbar navbar-default navbar-static-top" role="navigation">
-        <div class="navbar-inner">
-          
-          <div class="container"> 
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
+    
+      <div id="intrologo" class="intro-logo" style="background-position:center; background-repeat:no-repeat; background-image: url(); background-size: auto 100%;">
 
-            
-              <a class="brand" style="
-                 margin-top: 0px;"  
-                 >
-                  <img width="124px" height="124px" alt="Hike News" src="/css/images/mylogo.jpg">
-              </a>
-            
-            
-            <div class="navbar-collapse collapse">
-              <ul class="hnav navbar-nav">
-                
-                  <li> <a class="main-nav-link" href="/">首页</a> </li>
-                
-                  <li> <a class="main-nav-link" href="/archives">归档</a> </li>
-                
-                  <li> <a class="main-nav-link" href="/categories">分类</a> </li>
-                
-                  <li> <a class="main-nav-link" href="/tags">标签</a> </li>
-                
-                  <li> <a class="main-nav-link" href="/about">关于</a> </li>
-                
-                  <li><div id="search-form-wrap">
+      <!-- Support rolling -->  
+        
+        <section class="awSlider">
+          <div class="carousel slide carousel-fade " data-ride="carousel">
 
-    <form class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="" />
-        <button type="submit" class="search-form-submit"></button>
-    </form>
-    <div class="ins-search">
-    <div class="ins-search-mask"></div>
-    <div class="ins-search-container">
-        <div class="ins-input-wrapper">
-            <input type="text" class="ins-search-input" placeholder="请输入关键词..." />
-            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
-        </div>
-        <div class="ins-section-wrapper">
-            <div class="ins-section-container"></div>
-        </div>
-    </div>
-</div>
-<script>
-(function (window) {
-    var INSIGHT_CONFIG = {
-        TRANSLATION: {
-            POSTS: '文章',
-            PAGES: '页面',
-            CATEGORIES: '分类',
-            TAGS: '标签',
-            UNTITLED: '(无标题)',
-        },
-        ROOT_URL: '/',
-        CONTENT_URL: '/content.json',
-    };
-    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
-})(window);
-</script>
-<script src="/js/insight.js"></script>
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+               
+                  
+                    <div class="item active">
+                  
+                    <img id="carousel-img0" src="/css/images/429H.jpg">
+                  </div>
 
-</div></li>
+                  <!-- 自适应大图 -->
+                  <script>
+                      var img0 = new Image();
+                      var imageTag0 = document.getElementById("carousel-img0");
+                      img0.src = imageTag0.src;
+                      img0.onload=function(){
+                        if (img0.width / img0.height <= document.body.clientWidth / document.body.clientHeight) {
+                          imageTag0.style.width = document.body.clientWidth + "px";
+                        } else {
+                          imageTag0.style.height = document.body.clientHeight + "px";
+                          imageTag0.style.marginLeft = -(document.body.clientHeight * img0.width / img0.height - document.body.clientWidth) / 2 + "px";
+                        }
+                      };
+                  </script>
+                
+                  
+                    <div class="item">
+                  
+                    <img id="carousel-img1" src="/css/images/400H.jpg">
+                  </div>
+
+                  <!-- 自适应大图 -->
+                  <script>
+                      var img1 = new Image();
+                      var imageTag1 = document.getElementById("carousel-img1");
+                      img1.src = imageTag1.src;
+                      img1.onload=function(){
+                        if (img1.width / img1.height <= document.body.clientWidth / document.body.clientHeight) {
+                          imageTag1.style.width = document.body.clientWidth + "px";
+                        } else {
+                          imageTag1.style.height = document.body.clientHeight + "px";
+                          imageTag1.style.marginLeft = -(document.body.clientHeight * img1.width / img1.height - document.body.clientWidth) / 2 + "px";
+                        }
+                      };
+                  </script>
+                
+                  
+                    <div class="item">
+                  
+                    <img id="carousel-img2" src="/css/images/387H.jpg">
+                  </div>
+
+                  <!-- 自适应大图 -->
+                  <script>
+                      var img2 = new Image();
+                      var imageTag2 = document.getElementById("carousel-img2");
+                      img2.src = imageTag2.src;
+                      img2.onload=function(){
+                        if (img2.width / img2.height <= document.body.clientWidth / document.body.clientHeight) {
+                          imageTag2.style.width = document.body.clientWidth + "px";
+                        } else {
+                          imageTag2.style.height = document.body.clientHeight + "px";
+                          imageTag2.style.marginLeft = -(document.body.clientHeight * img2.width / img2.height - document.body.clientWidth) / 2 + "px";
+                        }
+                      };
+                  </script>
+                
             </div>
+
+            <!-- Controls -->
+            <a class="left carousel-control" href=".carousel" role="button" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+              <span class="sr-only">Geri</span>
+            </a>
+            <a class="right carousel-control" href=".carousel" role="button" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+              <span class="sr-only">İleri</span>
+            </a>
           </div>
-                
-      </div>
+        </section>
+        <script>
+          $('section.awSlider .carousel').carousel({
+              pause: '',
+              interval: 5000
+          });
+          var startImage = $('section.awSlider .item.active > img').attr('src');
+          $('section.awSlider .carousel').on('slid.bs.carousel', function () {
+              var bscn = $(this).find('.item.active > img').attr('src');
+              $('section.awSlider > img').attr('src', bscn);
+          });
+        </script>
+      
+
+    
+ 
+
+
+    <canvas width="100%" height="100%"></canvas>
+    <script>
+      var c = document.getElementsByTagName('canvas')[0],
+          x = c.getContext('2d'),
+          w = window.innerWidth,
+          h = window.innerHeight,
+          pr = window.devicePixelRatio || 1,
+          f = 90,
+          q,
+          m = Math,
+          r = 0,
+          u = m.PI*2,
+          v = m.cos,
+          z = m.random
+      c.width = w*pr
+      c.height = h*pr
+      x.scale(pr, pr)
+      x.globalAlpha = 0.6
+
+      
+    </script>
+    
+
+    
+      <div id="homelogo" class="homelogo" style="background: rgba(255,255,255,1);"> 
+    
+
+        
+          <div class="homelogoback"  style="border: 1px solid #404040;" >
+            <h1><a href="#content" id="logo">酸甜瓜</a></h1>
+            <h3>一路高歌猛进是电视剧，一地鸡毛才是生活</h3>
+            <h5>suantiangua</h5>
+            <!-- <p><a href="https://github.com/iTimeTraveler" target="_blank">Github</a></p> -->
+          </div>
+        
+    
     </div>
+  </div>
+
+  <!-- 自适应主页背景大图 -->
+  
+
+ <!-- home_logo_image居中 -->
+ 
+    <script>
+        var homelogodiv = document.getElementById("homelogo");
+        if (document.all.homelogo.offsetWidth > document.body.clientWidth) {
+          homelogodiv.style.width = document.body.clientWidth + "px";
+          homelogodiv.style.marginLeft = document.body.clientWidth * -0.5 + "px";
+        } else {
+          homelogodiv.style.width = homelogodiv.clientWidth  + "px";
+          homelogodiv.style.marginLeft = (homelogodiv.clientWidth)  * -0.5 + "px";
+        }
+    </script>
+  
+
+  <div class="intro-navigate">
+      <p class="navigater-list">
+        
+          <a id="beautifont" class="main-nav-link" href="/">首页</a>
+        
+          <a id="beautifont" class="main-nav-link" href="/archives">归档</a>
+        
+          <a id="beautifont" class="main-nav-link" href="/about">关于</a>
+        
+      </p>
+  </div>
 
 </header>
-
-
-
+  
+  <div id="container">
+    <div id="wrap">
       
             
       <div id="content" class="outer">
         
           <section id="main" style="float:none;">
+  
+    <article id="post-markdown 语法学习"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/08/16/markdown 语法学习/">MarkDown 语法学习</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/08/16/markdown 语法学习/" class="article-date">
+	  <time datetime="2017-08-16T09:06:11.000Z" itemprop="datePublished">2017-08-16</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/“MarkDown”/">“MarkDown”</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="段落与换行"><a href="#段落与换行" class="headerlink" title="段落与换行"></a>段落与换行</h2><ol>
+<li>段落的前后必须是空行 ( 空行指的是行内什么都没有，或者只有空白符（空格或制表符）)</li>
+<li>如果需要在段落内加入换行’&lt; b r &gt; ‘：</li>
+</ol>
+<p>栗子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">梅西什么时候去皇马啊？&lt;br&gt;  给钱都不去</div></pre></td></tr></table></figure>
+        <!-- 段落与换行
+段落的前后必须是空行 ( 空行指的是行内什么都没有，或者只有空白符（空格或制表符）)
+如果需要在段落内加入换行’&lt; b r &gt; ‘：
+
+栗子：
+1梅西什么时候去皇马啊？&lt;br&gt;  给钱都不去
+
+标题1.Setext 形式
+12345类型1：  标题一         =====类型2：  标题一        -----
+“=”、”-“ 的个数没有限制，但......  -->
+        <p class="article-more-link">
+          <a href="/2017/08/16/markdown 语法学习/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MarkDown/">MarkDown</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
   
     <article id="post-Hexo-Next的背景动态效果和心心"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
@@ -187,14 +341,13 @@
       
         <p>1.主题使用的是 Next 。先下载 love.js 和 particle.js<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">js 文件下载地址 </div><div class="line">http://7u2ss1.com1.z0.glb.clouddn.com/love.js</div><div class="line">http://7u2ss1.com1.z0.glb.clouddn.com/particle.js</div></pre></td></tr></table></figure></p>
 <p>如果地址无效了，可以直接复制下面代码</p>
-<font color="black" size="3">love.js</font><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">!function(e,t,a)&#123;function n()&#123;c(&quot;.heart&#123;width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);&#125;.heart:after,.heart:before&#123;content: &apos;&apos;;width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;&#125;.heart:after&#123;top: -5px;&#125;.heart:before&#123;left: -5px;&#125;&quot;),o(),r()&#125;function r()&#123;for(var e=0;e&lt;d.length;e++)d[e].alpha&lt;=0?(t.body.removeChild(d[e].el),d.splice(e,1)):(d[e].y--,d[e].scale+=.004,d[e].alpha-=.013,d[e].el.style.cssText=&quot;left:&quot;+d[e].x+&quot;px;top:&quot;+d[e].y+&quot;px;opacity:&quot;+d[e].alpha+&quot;;transform:scale(&quot;+d[e].scale+&quot;,&quot;+d[e].scale+&quot;) rotate(45deg);background:&quot;+d[e].color+&quot;;z-index:99999&quot;);requestAnimationFrame(r)&#125;function o()&#123;var t=&quot;function&quot;==typeof e.onclick&amp;&amp;e.onclick;e.onclick=function(e)&#123;t&amp;&amp;t(),i(e)&#125;&#125;function i(e)&#123;var a=t.createElement(&quot;div&quot;);a.className=&quot;heart&quot;,d.push(&#123;el:a,x:e.clientX-5,y:e.clientY-5,scale:1,alpha:1,color:s()&#125;),t.body.appendChild(a)&#125;function c(e)&#123;var a=t.createElement(&quot;style&quot;);a.type=&quot;text/css&quot;;try&#123;a.appendChild(t.createTextNode(e))&#125;catch(t)&#123;a.styleSheet.cssText=e&#125;t.getElementsByTagName(&quot;head&quot;)[0].appendChild(a)&#125;function s()&#123;return&quot;rgb(&quot;+~~(255*Math.random())+&quot;,&quot;+~~(255*Math.random())+&quot;,&quot;+~~(255*Math.random())+&quot;)&quot;&#125;var d=[];e.requestAnimationFrame=function()&#123;return e.requestAnimationFrame||e.webkitRequestAnimationFrame||e.mozRequestAnimationFrame||e.oRequestAnimationFrame||e.msRequestAnimationFrame||function(e)&#123;setTimeout(e,1e3/60)&#125;&#125;(),n()&#125;(window,document);</div></pre></td></tr></table></figure><br><br><font color="black" size="3">particle.js</font>
+        <!-- 1.主题使用的是 Next 。先下载 love.js 和 particle.js123js 文件下载地址 http://7u2ss1.com1.z0.glb.clouddn.com/love.jshttp://7u2ss1.com1.z0.glb.clouddn.com/particle.js
+如果地址无效了，可以直接复制下面代码
 
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">!function()&#123;function n(n,e,t)&#123;return n.getAttribute(e)||t&#125;function e(n)&#123;return document.getElementsByTagName(n)&#125;function t()&#123;var t=e(&quot;script&quot;),o=t.length,i=t[o-1];return&#123;l:o,z:n(i,&quot;zIndex&quot;,-1),o:n(i,&quot;opacity&quot;,.5),c:n(i,&quot;color&quot;,&quot;0,0,0&quot;),n:n(i,&quot;count&quot;,99)&#125;&#125;function o()&#123;c=u.width=window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth,a=u.height=window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight&#125;function i()&#123;l.clearRect(0,0,c,a);var n,e,t,o,u,d,x=[w].concat(y);y.forEach(function(i)&#123;for(i.x+=i.xa,i.y+=i.ya,i.xa*=i.x&gt;c||i.x&lt;0?-1:1,i.ya*=i.y&gt;a||i.y&lt;0?-1:1,l.fillRect(i.x-.5,i.y-.5,1,1),e=0;e&lt;x.length;e++)n=x[e],i!==n&amp;&amp;null!==n.x&amp;&amp;null!==n.y&amp;&amp;(o=i.x-n.x,u=i.y-n.y,d=o*o+u*u,d&lt;n.max&amp;&amp;(n===w&amp;&amp;d&gt;=n.max/2&amp;&amp;(i.x-=.03*o,i.y-=.03*u),t=(n.max-d)/n.max,l.beginPath(),l.lineWidth=t/2,l.strokeStyle=&quot;rgba(&quot;+m.c+&quot;,&quot;+(t+.2)+&quot;)&quot;,l.moveTo(i.x,i.y),l.lineTo(n.x,n.y),l.stroke()));x.splice(x.indexOf(i),1)&#125;),r(i)&#125;var c,a,u=document.createElement(&quot;canvas&quot;),m=t(),d=&quot;c_n&quot;+m.l,l=u.getContext(&quot;2d&quot;),r=window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.oRequestAnimationFrame||window.msRequestAnimationFrame||function(n)&#123;window.setTimeout(n,1e3/45)&#125;,x=Math.random,w=&#123;x:null,y:null,max:2e4&#125;;u.id=d,u.style.cssText=&quot;position:fixed;top:0;left:0;z-index:&quot;+m.z+&quot;;opacity:&quot;+m.o,e(&quot;body&quot;)[0].appendChild(u),o(),window.onresize=o,window.onmousemove=function(n)&#123;n=n||window.event,w.x=n.clientX,w.y=n.clientY&#125;,window.onmouseout=function()&#123;w.x=null,w.y=null&#125;;for(var y=[],s=0;m.n&gt;s;s++)&#123;var f=x()*c,h=x()*a,g=2*x()-1,p=2*x()-1;y.push(&#123;x:f,y:h,xa:g,ya:p,max:6e3&#125;)&#125;setTimeout(function()&#123;i()&#125;,100)&#125;();</div></pre></td></tr></table></figure>
-<p>2.把 js 文件 love.js 和 particle.js 放在 \themes\next\source\js\src 文件目录下</p>
-<p>3.更新 \themes\next\layout_layout.swig 文件，在末尾（在前面引用会出现找不到的bug）添加以下 js 引入代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;!-- 背景动画 --&gt;</div><div class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;/js/src/particle.js&quot;&gt;&lt;/script&gt;</div><div class="line">&lt;!-- 页面点击小红心 --&gt;</div><div class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;/js/src/love.js&quot;&gt;&lt;/script&gt;</div></pre></td></tr></table></figure>
-<p>4.运行 hexo g , hexo s 查看效果</p>
-
+love.js1!function(e,t,a)&#123......  -->
+        <p class="article-more-link">
+          <a href="/2017/06/21/Hexo-Next的背景动态效果和心心/#more">阅读全文</a>
+        </p>
       
     </div>
     <footer class="article-footer">
@@ -228,10 +381,7 @@
 	      <p id="copyRightEn">Copyright &copy; 2013 - 2017 酸甜瓜 All Rights Reserved.</p>
 	      
 	      
-    		<p class="busuanzi_uv">
-				访客数 : <span id="busuanzi_value_site_uv"></span> |  
-				访问量 : <span id="busuanzi_value_site_pv"></span>
-		    </p>
+  		   	<p id="copyRightCn">suantiangua 保留所有权利</p>
   		   
 		</div>
 
@@ -260,10 +410,6 @@
     <a href="/" class="mobile-nav-link">Home</a>
   
     <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-    <a href="/categories" class="mobile-nav-link">Categories</a>
-  
-    <a href="/tags" class="mobile-nav-link">Tags</a>
   
     <a href="/about" class="mobile-nav-link">About</a>
   
@@ -321,15 +467,22 @@
 
 
 	<div style="display: none;">
-    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+    <script src="https://s95.cnzz.com/z_stat.php?id=1263567458&web_id=1263567458" language="JavaScript"></script>
   </div>
 
 
 
-	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
-	</script>
 
 
+	<script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?{{ theme.baidu_analytics }}";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
 
 
 
