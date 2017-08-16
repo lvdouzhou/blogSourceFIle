@@ -7,7 +7,7 @@ title: 酸甜瓜
 subtitle:
 description: 一路高歌猛进是电视剧，一地鸡毛才是生活
 author: suantiangua
-language: zh-TW
+language: zh-CN
 timezone:
 
 # URL
@@ -66,8 +66,9 @@ pagination_dir: page
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 # theme: next
-theme: material
-# Deployment
+#theme: material
+theme: hiker
+## Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
