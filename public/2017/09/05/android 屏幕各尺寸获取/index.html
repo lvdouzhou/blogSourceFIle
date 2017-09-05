@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>android 屏幕各尺寸获取 | 酸甜瓜</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="android" />
+  
+  
+  
+  
+  <meta name="description" content="android 屏幕各尺寸获取">
+<meta name="keywords" content="android">
+<meta property="og:type" content="article">
+<meta property="og:title" content="android 屏幕各尺寸获取">
+<meta property="og:url" content="https://github.com/lvdouzhou/lvdouzhou.github.io.git/2017/09/05/android 屏幕各尺寸获取/index.html">
+<meta property="og:site_name" content="酸甜瓜">
+<meta property="og:description" content="android 屏幕各尺寸获取">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-09-05T09:27:17.884Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="android 屏幕各尺寸获取">
+<meta name="twitter:description" content="android 屏幕各尺寸获取">
+  
+    <link rel="alternate" href="/atom.xml" title="酸甜瓜" type="application/atom+xml">
+  
+
+  
+
+  <link rel="icon" href="/css/images/favicon.jpeg">
+  <link rel="apple-touch-icon" href="/css/images/favicon.jpeg">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="/js/jquery-3.1.1.min.js"></script>
+  <script src="/js/bootstrap.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+
+  
+    <link rel="stylesheet" href="/css/dialog.css">
+  
+
+  
+    <link rel="stylesheet" href="/css/header-post.css" >
+  
+
+  
+  
+  
+    <link rel="stylesheet" href="/css/vdonate.css" >
+  
+
+</head>
+
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  
+  <div id="container">
+    <div id="wrap">
+      
+        <header>
+
+    <div id="allheader" class="navbar navbar-default navbar-static-top" role="navigation">
+        <div class="navbar-inner">
+          
+          <div class="container"> 
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+            
+              <a class="brand" style="
+                 margin-top: 0px;"  
+                href="#" data-toggle="modal" data-target="#myModal" >
+                  <img width="124px" height="124px" alt="Hike News" src="/css/images/favicon.jpeg">
+              </a>
+            
+            
+            <div class="navbar-collapse collapse">
+              <ul class="hnav navbar-nav">
+                
+                  <li> <a class="main-nav-link" href="/">首页</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/archives">归档</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/about">关于</a> </li>
+                
+                  <li><div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(无标题)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div></li>
+            </div>
+          </div>
+                
+      </div>
+    </div>
+
+</header>
+
+
+
+      
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-android 屏幕各尺寸获取" style="width: 75%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      android 屏幕各尺寸获取
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/09/05/android 屏幕各尺寸获取/" class="article-date">
+	  <time datetime="2017-09-05T09:18:29.000Z" itemprop="datePublished">2017-09-05</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/“android”-“android-屏幕尺寸”/">“android” ,“android 屏幕尺寸”</a>
+
+      
+	<a class="article-views">
+	<span id="busuanzi_container_page_pv">
+		阅读量<span id="busuanzi_value_page_pv"></span>
+	</span>
+	</a>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在开发中我们会遇到各种需要获得屏幕参数的场景，当中也有不少坑，所以现在就记录一下这些参数的获取方式。以免再入坑。</p>
+<h2 id="物理屏幕宽高"><a href="#物理屏幕宽高" class="headerlink" title="物理屏幕宽高"></a>物理屏幕宽高</h2><p>一、底部没有虚拟按键<br>   这里获取到的宽高，就是你眼睛能看到的，屏幕亮着的地方的宽高。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">/**</div><div class="line"> * 获取屏幕的宽</div><div class="line"> *</div><div class="line"> * @param context</div><div class="line"> * @return</div><div class="line"> */</div><div class="line">public static int getScreenWidth(Context context) &#123;</div><div class="line">	WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);</div><div class="line">	DisplayMetrics dm = new DisplayMetrics();</div><div class="line">	wm.getDefaultDisplay().getMetrics(dm);</div><div class="line">	return dm.widthPixels;</div><div class="line">&#125;</div><div class="line"></div><div class="line">/**</div><div class="line"> * 获取屏幕的高度</div><div class="line"> *</div><div class="line"> * @param context</div><div class="line"> * @return</div><div class="line"> */</div><div class="line">public static int getScreenHeight(Context context) &#123;</div><div class="line">	WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);</div><div class="line">	DisplayMetrics dm = new DisplayMetrics();</div><div class="line">	wm.getDefaultDisplay().getMetrics(dm);</div><div class="line">	return dm.heightPixels;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<p>二、底部有虚拟按键<br>华为手机底部都会有一个黑色的虚拟按键(NavigationBar)，通过上面这个方式得到的屏幕高度是屏幕<strong>真是高度-虚拟按键的高度</strong>。所以有虚拟按键的情况获取屏幕的高度就是另一种方法了。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">	public static int getRealHeight(Context context) &#123;</div><div class="line">		WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);</div><div class="line">		Display display = wm.getDefaultDisplay();</div><div class="line">		int screenHeight = 0;</div><div class="line"></div><div class="line">		if (Build.VERSION.SDK_INT &gt;= Build.VERSION_CODES.JELLY_BEAN_MR1) &#123;</div><div class="line">			DisplayMetrics dm = new DisplayMetrics();</div><div class="line">			display.getRealMetrics(dm);</div><div class="line">			screenHeight = dm.heightPixels;</div><div class="line"></div><div class="line">			//或者也可以使用getRealSize方法</div><div class="line">//            Point size = new Point();</div><div class="line">//            display.getRealSize(size);</div><div class="line">//            screenHeight = size.y;</div><div class="line">		&#125; else if (Build.VERSION.SDK_INT &gt;= Build.VERSION_CODES.ICE_CREAM_SANDWICH) &#123;</div><div class="line">			try &#123;</div><div class="line">				screenHeight = (Integer) Display.class.getMethod(&quot;getRawHeight&quot;).invoke(display);</div><div class="line">			&#125; catch (Exception e) &#123;</div><div class="line">				DisplayMetrics dm = new DisplayMetrics();</div><div class="line">				display.getMetrics(dm);</div><div class="line">				screenHeight = dm.heightPixels;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		return screenHeight;</div><div class="line">	&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="虚拟按键高度"><a href="#虚拟按键高度" class="headerlink" title="虚拟按键高度"></a>虚拟按键高度</h2><p>虚拟按键(NavigationBar)高度可以通过读取定义在Android系统尺寸资源中的 navigation_bar_height 获得。<br>所以不管虚拟按键是显示还是隐藏，得到的结果都是一样的。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">public static int getNavigationBarHeight(Context context) &#123;</div><div class="line">	int navigationBarHeight = -1;</div><div class="line">	Resources resources = context.getResources();</div><div class="line">	int resourceId = resources.getIdentifier(&quot;navigation_bar_height&quot;,&quot;dimen&quot;, &quot;android&quot;);</div><div class="line">	if (resourceId &gt; 0) &#123;</div><div class="line">		navigationBarHeight = resources.getDimensionPixelSize(resourceId);</div><div class="line">	&#125;</div><div class="line">	return navigationBarHeight;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="状态栏高度"><a href="#状态栏高度" class="headerlink" title="状态栏高度"></a>状态栏高度</h2><p>状态栏就是屏幕顶部显示时间，电池，wifi 等信息的栏目。</p>
+<ol>
+<li><p>方法一：系统提供了一个Resource类，通过这个类可以获取资源文件，借此可以获取 到status_bar_height 。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">public int getStatusBarHeight() &#123;</div><div class="line">	int result = 0;</div><div class="line">	int resourceId = getResources().getIdentifier(&quot;status_bar_height&quot;, &quot;dimen&quot;, &quot;android&quot;);</div><div class="line">	if (resourceId &gt; 0) &#123;</div><div class="line">		result = getResources().getDimensionPixelSize(resourceId);</div><div class="line">	&#125;</div><div class="line">	return result;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>方法2： 通过反射<br>Android的所有资源都会有惟一标识在R类中作为引用。我们也可以通过反射获取R类的实例域，然后找 status_bar_height。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">public void getStatusBarHeightByReflect() &#123;</div><div class="line">	int statusBarHeight2 = -1;</div><div class="line">	try &#123;</div><div class="line">		Class&lt;?&gt; clazz = Class.forName(&quot;com.android.internal.R$dimen&quot;);</div><div class="line">		Object object = clazz.newInstance();</div><div class="line">		int height = Integer.parseInt(clazz.getField(&quot;status_bar_height&quot;)</div><div class="line">				.get(object).toString());</div><div class="line">		statusBarHeight2 = getResources().getDimensionPixelSize(height);</div><div class="line">	&#125; catch (Exception e) &#123;</div><div class="line">		e.printStackTrace();</div><div class="line">	&#125;</div><div class="line">	Log.e(TAG, &quot;状态栏高度-反射方式：&quot; + statusBarHeight2);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>借助应用区 top 属性。<br>状态栏位于屏幕的最顶端，坐标从 (0,0) 开始，所以应用区的顶部的位置就是状态栏的高度。 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div><div class="line">/**</div><div class="line"> * 应用区的顶端位置即状态栏的高度</div><div class="line"> * *注意*该方法不能在初始化的时候用</div><div class="line"> * */</div><div class="line">public void getStatusBarHeightByTop() &#123;</div><div class="line">	</div><div class="line">	Rect rectangle = new Rect();</div><div class="line">	getWindow().getDecorView().getWindowVisibleDisplayFrame(rectangle);</div><div class="line">	Log.e(TAG, &quot;状态栏高度-应用区顶部:&quot; + rectangle.top);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="应用区域高度"><a href="#应用区域高度" class="headerlink" title="应用区域高度"></a>应用区域高度</h2><p>除去状态栏剩下的都时应用区。由此可知<strong>屏幕的高度 - 状态栏高度 = 应用区的高度</strong>。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line">	 * 不能在 onCreate 方法中使用。</div><div class="line">	 * 因为这种方法依赖于WMS（窗口管理服务的回调）。正是因为窗口回调机制，所以在Activity初始化时执行此方法得到的高度是0。</div><div class="line">	 * 这个方法推荐在回调方法onWindowFocusChanged()中执行，才能得到预期结果。</div><div class="line">	 */</div><div class="line">	public void getAppViewHeight()&#123;</div><div class="line">		//屏幕</div><div class="line">		DisplayMetrics dm = new DisplayMetrics();</div><div class="line">		getWindowManager().getDefaultDisplay().getMetrics(dm);</div><div class="line">		//应用区域</div><div class="line">		Rect outRect1 = new Rect();</div><div class="line">		getWindow().getDecorView().getWindowVisibleDisplayFrame(outRect1);</div><div class="line">		int statusBar = dm.heightPixels - outRect1.height();  //状态栏高度=屏幕高度-应用区域高度</div><div class="line">		Log.e(TAG, &quot;应用区高度:&quot; + statusBar);</div><div class="line">	&#125;</div></pre></td></tr></table></figure>
+<h2 id="setContentView-高度，view-显示的高度"><a href="#setContentView-高度，view-显示的高度" class="headerlink" title="setContentView 高度，view 显示的高度"></a>setContentView 高度，view 显示的高度</h2><p>需要在见面创建后才能获取到。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">public static int getContentViewHeight(Activity activity) &#123;</div><div class="line">		Rect rectangle= new Rect();</div><div class="line">		activity.getWindow().findViewById(Window.ID_ANDROID_CONTENT).getDrawingRect(rectangle);</div><div class="line">		return rectangle.height();</div><div class="line">	&#125;</div></pre></td></tr></table></figure>
+<h2 id="标题栏高度"><a href="#标题栏高度" class="headerlink" title="标题栏高度"></a>标题栏高度</h2><p>标题栏高度 = 应用区高度 - view 显示高度<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">   public static void getTitleBarHeight(Activity activity) &#123;</div><div class="line">	Rect outRect1 = new Rect();</div><div class="line">	activity.getWindow().getDecorView().getWindowVisibleDisplayFrame(outRect1);</div><div class="line"></div><div class="line">	int viewTop = activity.getWindow().findViewById(Window.ID_ANDROID_CONTENT).getTop();   //要用这种方法</div><div class="line">	int titleBarH = viewTop - outRect1.top;</div><div class="line"></div><div class="line">	Log.e(TAG, &quot;标题栏高度-计算:&quot; + titleBarH);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+        <div id="donation_div"></div>
+
+<script src="/js/vdonate.js"></script>
+<script>
+var a = new Donate({
+  title: '如果觉得我的文章对您有用，请随意打赏。您的支持将鼓励我继续创作!', // 可选参数，打赏标题
+  btnText: '打赏支持', // 可选参数，打赏按钮文字
+  el: document.getElementById('donation_div'),
+  wechatImage: 'https://raw.githubusercontent.com/lvdouzhou/blogSourceFIle/master/source/weixin.png',
+  alipayImage: 'https://raw.githubusercontent.com/lvdouzhou/blogSourceFIle/master/source/zhifubao.jpg'
+});
+</script>
+      
+      
+        
+	<div id="comment">
+		<!-- 来必力City版安装代码 -->
+		<div id="lv-container" data-id="city" data-uid="MTAyMC8zMDIxNi82Nzcx">
+		<script type="text/javascript">
+		   (function(d, s) {
+		       var j, e = d.getElementsByTagName(s)[0];
+
+		       if (typeof LivereTower === 'function') { return; }
+
+		       j = d.createElement(s);
+		       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+		       j.async = true;
+
+		       e.parentNode.insertBefore(j, e);
+		   })(document, 'script');
+		</script>
+		<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+		</div>
+		<!-- City版安装代码已完成 -->
+	</div>
+
+
+
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/09/05/UML 类图学习笔记/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          UML 类图学习笔记
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/08/17/正则表达式/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">正则表达式</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="toc-sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#物理屏幕宽高"><span class="nav-number">1.</span> <span class="nav-text">物理屏幕宽高</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#虚拟按键高度"><span class="nav-number">2.</span> <span class="nav-text">虚拟按键高度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#状态栏高度"><span class="nav-number">3.</span> <span class="nav-text">状态栏高度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#应用区域高度"><span class="nav-number">4.</span> <span class="nav-text">应用区域高度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#setContentView-高度，view-显示的高度"><span class="nav-number">5.</span> <span class="nav-text">setContentView 高度，view 显示的高度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#标题栏高度"><span class="nav-number">6.</span> <span class="nav-text">标题栏高度</span></a></li></ol>
+    
+    </div>
+  </aside>
+</section>
+        
+      </div>
+      
+      <footer id="footer">
+  
+
+  <div class="container">
+      	<div class="row">
+	      <p> Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/iTimeTraveler/hexo-theme-hiker" target="_blank">Hexo-theme-hiker</a> </p>
+	      <p id="copyRightEn">Copyright &copy; 2013 - 2017 酸甜瓜 All Rights Reserved.</p>
+	      
+	      
+    		<p class="busuanzi_uv">
+				访客数 : <span id="busuanzi_value_site_uv"></span> |  
+				访问量 : <span id="busuanzi_value_site_pv"></span>
+		    </p>
+  		   
+		</div>
+
+		
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+    var allheader = document.getElementById("allheader");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight + "px";
+    if (allheader != null) {
+      contentdiv.style.minHeight = document.body.offsetHeight - allheader.offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    } else {
+      contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    }
+</script>
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/scripts.js"></script>
+
+
+
+
+  <script src="/js/dialog.js"></script>
+
+
+
+
+
+
+
+
+	<div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1263567458&web_id=1263567458" language="JavaScript"></script>
+  </div>
+
+
+
+	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+	</script>
+
+
+
+	<script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?{{ theme.baidu_analytics }}";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  </div>
+
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="myModalLabel">设置</h2>
+      </div>
+      <hr style="margin-top:0px; margin-bottom:0px; width:80%; border-top: 3px solid #000;">
+      <hr style="margin-top:2px; margin-bottom:0px; width:80%; border-top: 1px solid #000;">
+
+
+      <div class="modal-body">
+          <div style="margin:6px;">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" onclick="javascript:setFontSize();" aria-expanded="true" aria-controls="collapseOne">
+              正文字号大小
+            </a>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+          <div class="panel-body">
+            您已调整页面字体大小
+          </div>
+        </div>
+      
+
+
+          <div style="margin:6px;">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" onclick="javascript:setBackground();" aria-expanded="true" aria-controls="collapseTwo">
+              夜间护眼模式
+            </a>
+        </div>
+          <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+          <div class="panel-body">
+            夜间模式已经开启，再次单击按钮即可关闭 
+          </div>
+        </div>
+
+        <div>
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;关 于&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        </div>
+         <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+          <div class="panel-body">
+            酸甜瓜
+          </div>
+          <div class="panel-body">
+            Copyright © 2017 suantiangua All Rights Reserved.
+          </div>
+        </div>
+      </div>
+
+
+      <hr style="margin-top:0px; margin-bottom:0px; width:80%; border-top: 1px solid #000;">
+      <hr style="margin-top:2px; margin-bottom:0px; width:80%; border-top: 3px solid #000;">
+      <div class="modal-footer">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+  
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+  
+    <a id="menu-switch"><i class="fa fa-bars fa-lg"></i></a>
+  
+</body>
+</html>

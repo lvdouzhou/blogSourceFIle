@@ -73,5 +73,5 @@ theme: hiker
 deploy:
   type: git
   repository:
-      coding: https://github.com/lvdouzhou/lvdouzhou.github.io.git
+      github: https://github.com/lvdouzhou/lvdouzhou.github.io.git
   branch: master

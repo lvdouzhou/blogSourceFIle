@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>uml 类图学习笔记 | 酸甜瓜</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="UML" />
+  
+  
+  
+  
+  <meta name="description" content="UML">
+<meta name="keywords" content="UML">
+<meta property="og:type" content="article">
+<meta property="og:title" content="UML 类图学习笔记">
+<meta property="og:url" content="https://github.com/lvdouzhou/lvdouzhou.github.io.git/2017/09/05/UML 类图学习笔记/index.html">
+<meta property="og:site_name" content="酸甜瓜">
+<meta property="og:description" content="UML">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://raw.githubusercontent.com/lvdouzhou/blopPic/master/UML1.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/lvdouzhou/blopPic/master/UML10.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/lvdouzhou/blopPic/d24b7f7a90240a98d888abdc2c1c91a8c3e30d9a/UML3.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/lvdouzhou/blopPic/d24b7f7a90240a98d888abdc2c1c91a8c3e30d9a/UML4.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/lvdouzhou/blopPic/d24b7f7a90240a98d888abdc2c1c91a8c3e30d9a/UML5.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/lvdouzhou/blopPic/d24b7f7a90240a98d888abdc2c1c91a8c3e30d9a/UML6.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/lvdouzhou/blopPic/d24b7f7a90240a98d888abdc2c1c91a8c3e30d9a/UML7.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/lvdouzhou/blopPic/d24b7f7a90240a98d888abdc2c1c91a8c3e30d9a/UML8.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/lvdouzhou/blopPic/d24b7f7a90240a98d888abdc2c1c91a8c3e30d9a/UML9.jpg">
+<meta property="og:updated_time" content="2017-09-05T09:27:25.092Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="UML 类图学习笔记">
+<meta name="twitter:description" content="UML">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/lvdouzhou/blopPic/master/UML1.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="酸甜瓜" type="application/atom+xml">
+  
+
+  
+
+  <link rel="icon" href="/css/images/favicon.jpeg">
+  <link rel="apple-touch-icon" href="/css/images/favicon.jpeg">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="/js/jquery-3.1.1.min.js"></script>
+  <script src="/js/bootstrap.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+
+  
+    <link rel="stylesheet" href="/css/dialog.css">
+  
+
+  
+    <link rel="stylesheet" href="/css/header-post.css" >
+  
+
+  
+  
+  
+    <link rel="stylesheet" href="/css/vdonate.css" >
+  
+
+</head>
+
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  
+  <div id="container">
+    <div id="wrap">
+      
+        <header>
+
+    <div id="allheader" class="navbar navbar-default navbar-static-top" role="navigation">
+        <div class="navbar-inner">
+          
+          <div class="container"> 
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+            
+              <a class="brand" style="
+                 margin-top: 0px;"  
+                href="#" data-toggle="modal" data-target="#myModal" >
+                  <img width="124px" height="124px" alt="Hike News" src="/css/images/favicon.jpeg">
+              </a>
+            
+            
+            <div class="navbar-collapse collapse">
+              <ul class="hnav navbar-nav">
+                
+                  <li> <a class="main-nav-link" href="/">首页</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/archives">归档</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/about">关于</a> </li>
+                
+                  <li><div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(无标题)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div></li>
+            </div>
+          </div>
+                
+      </div>
+    </div>
+
+</header>
+
+
+
+      
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-UML 类图学习笔记" style="width: 75%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      UML 类图学习笔记
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/09/05/UML 类图学习笔记/" class="article-date">
+	  <time datetime="2017-09-05T09:18:29.000Z" itemprop="datePublished">2017-09-05</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/“UML”/">“UML”</a>
+
+      
+	<a class="article-views">
+	<span id="busuanzi_container_page_pv">
+		阅读量<span id="busuanzi_value_page_pv"></span>
+	</span>
+	</a>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>平时看代码时，特别是复杂的 app 类和类之间的关系错综复杂，想要理清楚他们之间的关系，往往是非常烧脑的。不过通过<br>使用 UML 图就可以达到事半功倍的效果。</p>
+<h2 id="UML-图"><a href="#UML-图" class="headerlink" title="UML 图"></a>UML 图</h2><p>在 UML 图中，使用一个矩形加两根横线表示一个类。如下图所示</p>
+<p><img src="https://raw.githubusercontent.com/lvdouzhou/blopPic/master/UML1.jpg" alt="图1: UML 图"></p>
+<ul>
+<li>第一行： 类名  </li>
+<li>第二行:  属性</li>
+<li>第三行： 方法</li>
+<li>+ : public</li>
+<li>- : private</li>
+<li># : protected</li>
+</ul>
+<h2 id="类的属性表示"><a href="#类的属性表示" class="headerlink" title="类的属性表示"></a>类的属性表示</h2><p><strong>格式：可见性  名称 ：类型 [ = 缺省值]</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">java : public int startIndex = -1</div><div class="line"></div><div class="line">UML  : + startIndex :int  =-1</div></pre></td></tr></table></figure>
+<h2 id="类的方法表示"><a href="#类的方法表示" class="headerlink" title="类的方法表示"></a>类的方法表示</h2><p><strong>格式：可见性  名称(参数列表) [ ： 返回类型]</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">栗子 无参数：</div><div class="line">    java : public void action ()</div><div class="line">    UML  : + action()  :void</div><div class="line">    </div><div class="line">栗子 有参数：</div><div class="line">    java : public void action1 (String params)</div><div class="line">    UML  : + action1(String params)  :void</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<h2 id="类之间的关系"><a href="#类之间的关系" class="headerlink" title="类之间的关系"></a>类之间的关系</h2><h3 id="关联关系"><a href="#关联关系" class="headerlink" title="关联关系"></a>关联关系</h3><ol>
+<li>单向关联</li>
+</ol>
+<p>单向关联用一个带箭头的直线表示，表示每个教室都有学生 </p>
+<p><img src="https://raw.githubusercontent.com/lvdouzhou/blopPic/master/UML10.jpg" alt="图2 ：单向关联"></p>
+<ol>
+<li>双向关联 </li>
+</ol>
+<p>双向关联就是双方各自持有对方类型的成员变量。在UML类图中，双向关联用一个不带箭头的直线表示。</p>
+<p><img src="https://raw.githubusercontent.com/lvdouzhou/blopPic/d24b7f7a90240a98d888abdc2c1c91a8c3e30d9a/UML3.jpg" alt="图3 ：双向关联"></p>
+<ol>
+<li>自关联</li>
+</ol>
+<p>自关联在UML类图中用一个带有箭头且指向自身的直线表示。上图的意思就是Node类包含类型为Node的成员变量，也就是“自己包含自己”。</p>
+<p><img src="https://raw.githubusercontent.com/lvdouzhou/blopPic/d24b7f7a90240a98d888abdc2c1c91a8c3e30d9a/UML4.jpg" alt="图4 ：自关联"></p>
+<h3 id="聚合关系"><a href="#聚合关系" class="headerlink" title="聚合关系"></a>聚合关系</h3><p><img src="https://raw.githubusercontent.com/lvdouzhou/blopPic/d24b7f7a90240a98d888abdc2c1c91a8c3e30d9a/UML5.jpg" alt="图5：聚合关系"></p>
+<p>上图中的Car类与Engine类就是聚合关系（Car类中包含一个Engine类型的成员变量）。由上图我们可以看到，UML中聚合关系用带空心菱形和箭头的直线表示。聚合关系强调是“整体”包含“部分”，但是“部分”可以脱离“整体”而单独存在。比如上图中汽车包含了发动机，而发动机脱离了汽车也能单独存在。</p>
+<h3 id="组合关系"><a href="#组合关系" class="headerlink" title="组合关系"></a>组合关系</h3><p><img src="https://raw.githubusercontent.com/lvdouzhou/blopPic/d24b7f7a90240a98d888abdc2c1c91a8c3e30d9a/UML6.jpg" alt="图6：组合关系"></p>
+<p>组合关系与聚合关系见得最大不同在于：这里的“部分”脱离了“整体”便不复存在。显然眼睛不能脱离人类而存在。</p>
+<h3 id="依赖关系"><a href="#依赖关系" class="headerlink" title="依赖关系"></a>依赖关系</h3><p><img src="https://raw.githubusercontent.com/lvdouzhou/blopPic/d24b7f7a90240a98d888abdc2c1c91a8c3e30d9a/UML7.jpg" alt="图7：依赖关系"></p>
+<p>在UML类图中，依赖关系用一条带有箭头的虚线表示。</p>
+<h3 id="继承关系"><a href="#继承关系" class="headerlink" title="继承关系"></a>继承关系</h3><p><img src="https://raw.githubusercontent.com/lvdouzhou/blopPic/d24b7f7a90240a98d888abdc2c1c91a8c3e30d9a/UML8.jpg" alt="图8：继承关系"></p>
+<p>继承关系对应的是extend关键字，在UML类图中用带空心三角形的直线表示。</p>
+<h3 id="接口关系"><a href="#接口关系" class="headerlink" title="接口关系"></a>接口关系</h3><p><img src="https://raw.githubusercontent.com/lvdouzhou/blopPic/d24b7f7a90240a98d888abdc2c1c91a8c3e30d9a/UML9.jpg" alt="图9：接口关系"></p>
+<p>这种关系对应implement关键字，在UML类图中用带空心三角形的虚线表示。</p>
+<p>到这里我们就能基本看懂和绘制 UML 图啦。</p>
+<p><a href="http://moguozhou.site/" target="_blank" rel="external">欢迎移步到小弟的 Blog，有更多意想不到的干货哦!</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+        <div id="donation_div"></div>
+
+<script src="/js/vdonate.js"></script>
+<script>
+var a = new Donate({
+  title: '如果觉得我的文章对您有用，请随意打赏。您的支持将鼓励我继续创作!', // 可选参数，打赏标题
+  btnText: '打赏支持', // 可选参数，打赏按钮文字
+  el: document.getElementById('donation_div'),
+  wechatImage: 'https://raw.githubusercontent.com/lvdouzhou/blogSourceFIle/master/source/weixin.png',
+  alipayImage: 'https://raw.githubusercontent.com/lvdouzhou/blogSourceFIle/master/source/zhifubao.jpg'
+});
+</script>
+      
+      
+        
+	<div id="comment">
+		<!-- 来必力City版安装代码 -->
+		<div id="lv-container" data-id="city" data-uid="MTAyMC8zMDIxNi82Nzcx">
+		<script type="text/javascript">
+		   (function(d, s) {
+		       var j, e = d.getElementsByTagName(s)[0];
+
+		       if (typeof LivereTower === 'function') { return; }
+
+		       j = d.createElement(s);
+		       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+		       j.async = true;
+
+		       e.parentNode.insertBefore(j, e);
+		   })(document, 'script');
+		</script>
+		<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+		</div>
+		<!-- City版安装代码已完成 -->
+	</div>
+
+
+
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/UML/">UML</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/09/05/android 屏幕各尺寸获取/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">android 屏幕各尺寸获取</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="toc-sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#UML-图"><span class="nav-number">1.</span> <span class="nav-text">UML 图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#类的属性表示"><span class="nav-number">2.</span> <span class="nav-text">类的属性表示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#类的方法表示"><span class="nav-number">3.</span> <span class="nav-text">类的方法表示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#类之间的关系"><span class="nav-number">4.</span> <span class="nav-text">类之间的关系</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#关联关系"><span class="nav-number">4.1.</span> <span class="nav-text">关联关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#聚合关系"><span class="nav-number">4.2.</span> <span class="nav-text">聚合关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#组合关系"><span class="nav-number">4.3.</span> <span class="nav-text">组合关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#依赖关系"><span class="nav-number">4.4.</span> <span class="nav-text">依赖关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#继承关系"><span class="nav-number">4.5.</span> <span class="nav-text">继承关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#接口关系"><span class="nav-number">4.6.</span> <span class="nav-text">接口关系</span></a></li></ol></li></ol>
+    
+    </div>
+  </aside>
+</section>
+        
+      </div>
+      
+      <footer id="footer">
+  
+
+  <div class="container">
+      	<div class="row">
+	      <p> Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/iTimeTraveler/hexo-theme-hiker" target="_blank">Hexo-theme-hiker</a> </p>
+	      <p id="copyRightEn">Copyright &copy; 2013 - 2017 酸甜瓜 All Rights Reserved.</p>
+	      
+	      
+    		<p class="busuanzi_uv">
+				访客数 : <span id="busuanzi_value_site_uv"></span> |  
+				访问量 : <span id="busuanzi_value_site_pv"></span>
+		    </p>
+  		   
+		</div>
+
+		
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+    var allheader = document.getElementById("allheader");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight + "px";
+    if (allheader != null) {
+      contentdiv.style.minHeight = document.body.offsetHeight - allheader.offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    } else {
+      contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    }
+</script>
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/scripts.js"></script>
+
+
+
+
+  <script src="/js/dialog.js"></script>
+
+
+
+
+
+
+
+
+	<div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1263567458&web_id=1263567458" language="JavaScript"></script>
+  </div>
+
+
+
+	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+	</script>
+
+
+
+	<script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?{{ theme.baidu_analytics }}";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  </div>
+
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="myModalLabel">设置</h2>
+      </div>
+      <hr style="margin-top:0px; margin-bottom:0px; width:80%; border-top: 3px solid #000;">
+      <hr style="margin-top:2px; margin-bottom:0px; width:80%; border-top: 1px solid #000;">
+
+
+      <div class="modal-body">
+          <div style="margin:6px;">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" onclick="javascript:setFontSize();" aria-expanded="true" aria-controls="collapseOne">
+              正文字号大小
+            </a>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+          <div class="panel-body">
+            您已调整页面字体大小
+          </div>
+        </div>
+      
+
+
+          <div style="margin:6px;">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" onclick="javascript:setBackground();" aria-expanded="true" aria-controls="collapseTwo">
+              夜间护眼模式
+            </a>
+        </div>
+          <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+          <div class="panel-body">
+            夜间模式已经开启，再次单击按钮即可关闭 
+          </div>
+        </div>
+
+        <div>
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;关 于&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        </div>
+         <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+          <div class="panel-body">
+            酸甜瓜
+          </div>
+          <div class="panel-body">
+            Copyright © 2017 suantiangua All Rights Reserved.
+          </div>
+        </div>
+      </div>
+
+
+      <hr style="margin-top:0px; margin-bottom:0px; width:80%; border-top: 1px solid #000;">
+      <hr style="margin-top:2px; margin-bottom:0px; width:80%; border-top: 3px solid #000;">
+      <div class="modal-footer">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+  
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+  
+    <a id="menu-switch"><i class="fa fa-bars fa-lg"></i></a>
+  
+</body>
+</html>

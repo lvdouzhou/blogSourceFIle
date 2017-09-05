@@ -250,6 +250,129 @@
         
           <section id="main" style="float:none;">
   
+    <article id="post-UML 类图学习笔记"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/09/05/UML 类图学习笔记/">UML 类图学习笔记</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/09/05/UML 类图学习笔记/" class="article-date">
+	  <time datetime="2017-09-05T09:18:29.000Z" itemprop="datePublished">2017-09-05</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/“UML”/">“UML”</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>平时看代码时，特别是复杂的 app 类和类之间的关系错综复杂，想要理清楚他们之间的关系，往往是非常烧脑的。不过通过<br>使用 UML 图就可以达到事半功倍的效果。</p>
+<h2 id="UML-图"><a href="#UML-图" class="headerlink" title="UML 图"></a>UML 图</h2><p>在 UML 图中，使用一个矩形加两根横线表示一个类。如下图所示</p>
+<p><img src="https://raw.githubusercontent.com/lvdouzhou/blopPic/master/UML1.jpg" alt="图1: UML 图"></p>
+<ul>
+<li>第一行： 类名  </li>
+<li>第二行:  属性</li>
+<li>第三行： 方法</li>
+<li>+ : public</li>
+<li>- : private</li>
+<li># : protected</li>
+</ul>
+<h2 id="类的属性表示"><a href="#类的属性表示" class="headerlink" title="类的属性表示"></a>类的属性表示</h2><p><strong>格式：可见性  名称 ：类型 [ = 缺省值]</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">java : public int startIndex = -1</div><div class="line"></div><div class="line">UML  : + startIndex :int  =-1</div></pre></td></tr></table></figure>
+<h2 id="类的方法表示"><a href="#类的方法表示" class="headerlink" title="类的方法表示"></a>类的方法表示</h2><p><strong>格式：可见性  名称(参数列表) [ ： 返回类型]</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">栗子 无参数：</div><div class="line">    java : public void action ()</div><div class="line">    UML  : + action()  :void</div><div class="line">    </div><div class="line">栗子 有参数：</div><div class="line">    java : public void action1 (String params)</div><div class="line">    UML  : + action1(String params)  :void</div></pre></td></tr></table></figure>
+        <!-- 平时看代码时，特别是复杂的 app 类和类之间的关系错综复杂，想要理清楚他们之间的关系，往往是非常烧脑的。不过通过使用 UML 图就可以达到事半功倍的效果。
+UML 图在 UML 图中，使用一个矩形加两根横线表示一个类。如下图所示
+
+
+第一行： 类名  
+第二行:  属性
+第三行： 方法
++ : public
+- : private
+# : protected
+
+类的属性表示格式：可见性  ......  -->
+        <p class="article-more-link">
+          <a href="/2017/09/05/UML 类图学习笔记/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/UML/">UML</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
+    <article id="post-android 屏幕各尺寸获取"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/09/05/android 屏幕各尺寸获取/">android 屏幕各尺寸获取</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/09/05/android 屏幕各尺寸获取/" class="article-date">
+	  <time datetime="2017-09-05T09:18:29.000Z" itemprop="datePublished">2017-09-05</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/“android”-“android-屏幕尺寸”/">“android” ,“android 屏幕尺寸”</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在开发中我们会遇到各种需要获得屏幕参数的场景，当中也有不少坑，所以现在就记录一下这些参数的获取方式。以免再入坑。</p>
+<h2 id="物理屏幕宽高"><a href="#物理屏幕宽高" class="headerlink" title="物理屏幕宽高"></a>物理屏幕宽高</h2><p>一、底部没有虚拟按键<br>   这里获取到的宽高，就是你眼睛能看到的，屏幕亮着的地方的宽高。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">/**</div><div class="line"> * 获取屏幕的宽</div><div class="line"> *</div><div class="line"> * @param context</div><div class="line"> * @return</div><div class="line"> */</div><div class="line">public static int getScreenWidth(Context context) &#123;</div><div class="line">	WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);</div><div class="line">	DisplayMetrics dm = new DisplayMetrics();</div><div class="line">	wm.getDefaultDisplay().getMetrics(dm);</div><div class="line">	return dm.widthPixels;</div><div class="line">&#125;</div><div class="line"></div><div class="line">/**</div><div class="line"> * 获取屏幕的高度</div><div class="line"> *</div><div class="line"> * @param context</div><div class="line"> * @return</div><div class="line"> */</div><div class="line">public static int getScreenHeight(Context context) &#123;</div><div class="line">	WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);</div><div class="line">	DisplayMetrics dm = new DisplayMetrics();</div><div class="line">	wm.getDefaultDisplay().getMetrics(dm);</div><div class="line">	return dm.heightPixels;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+        <!-- 在开发中我们会遇到各种需要获得屏幕参数的场景，当中也有不少坑，所以现在就记录一下这些参数的获取方式。以免再入坑。
+物理屏幕宽高一、底部没有虚拟按键   这里获取到的宽高，就是你眼睛能看到的，屏幕亮着的地方的宽高。1234567891011121314151617181920212223242526/** * 获取屏幕的宽 * * @param context * @return */publ......  -->
+        <p class="article-more-link">
+          <a href="/2017/09/05/android 屏幕各尺寸获取/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
     <article id="post-正则表达式"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
